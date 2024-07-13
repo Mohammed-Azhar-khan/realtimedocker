@@ -1,14 +1,26 @@
 version: '3'
 services:
   web:
-    image: azhar321/paycricket:v1
+    image: azhar321/paymovies:v1
     ports:
       - "8006:80"
     deploy:
       replicas: 3
   web2:
-    image: azhar321/paybowlling:v1
+    image: azhar321/paytrain:v1
     ports:
       - "8007:80"
+    deploy:
+      replicas: 3
+  web3:
+    image: azhar321/paydth:v1
+    ports:
+      - "8008:80"
+    deploy:
+      replicas: 2
+  web4:
+    image: azhar321/payrecharge:v1
+    ports:
+      - "8009:80"
     deploy:
       replicas: 3
